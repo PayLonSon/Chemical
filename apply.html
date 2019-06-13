@@ -178,17 +178,7 @@
                       <td>09XXXXXXXX</td>
                       <td>ＸＸ學校</td>
                       <td>
-                        <a href="#" class="btn btn-success btn-circle btn-sm">
-                          <i class="fas fa-check"></i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>沈ＸＸ</td>
-                      <td>09XXXXXXXX</td>
-                      <td>ＸＸ學校</td>
-                      <td>
-                        <a href="#" class="btn btn-success btn-circle btn-sm">
+                        <a href="#" class="btn btn-success btn-circle btn-sm" href="#" data-toggle="modal" data-target="#checkModal">
                           <i class="fas fa-check"></i>
                         </a>
                       </td>
@@ -226,25 +216,87 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
+  <!-- Check Modal-->
+  <div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="checkModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkModalLabel">確定要與此廠商交易？</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+       <!-- modal_body-->
+          <div class="modal-body">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>欄位</th>
+                      <th>名稱</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>欄位</th>
+                      <th>名稱</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>單位名稱</td>
+                      <td>ＸＸ大學 化學系</td>
+                    </tr>
+                    <tr>
+                      <td>聯絡人</td>
+                      <td>林ＸＸ</td>
+                    </tr>
+                    <tr>
+                      <td>電話</td>
+                      <td>09XX-XXXXXX</td>
+                    </tr>
+                    <tr>
+                      <td>地址</td>
+                      <td>台北市中山區ＸＸ路ＸＸ巷ＸＸ號</td>
+                    </tr>
+                    <tr>
+                      <td>數量</td>
+                      <td>1</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          
+          </div>
+          <!-- modal_body-->
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" href="record.html">確定</a>
+        </div>
+      </div>
+    </div>
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">是否確認要登出?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">選擇登出跳出此使用者</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" href="index.html">登出</a>
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

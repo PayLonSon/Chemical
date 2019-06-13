@@ -180,17 +180,19 @@
                   </tfoot>
                   <tbody>
                     <tr>
-                      <td><a href="#">1</a></td>
+                      <td>1</td>
                       <td>2-Propanol</td>
                       <td>Merch</td>
                       <td>1.09634</td>
                       <td></td>
-                      <td>林ＸＸ</td>
-                      <td><a href="#"><font size="1">供應</font></a></td>
+                      <td><a href="#" data-toggle="modal" data-target="#userModal">  
+                            林ＸＸ
+                        </a></td>
+                      <td><a href="#" data-toggle="modal" data-target="#flowModal"><font size="1">已供應</font></a></td>
                       <td><font size="1">2019-05-23 10：55：23</font></td>
                     </tr>
                     <tr>
-                      <td><a href="#">10</a></td>
+                      <td>10</td>
                       <td>2-Propanol</td>
                       <td>Merch</td>
                       <td>1.09634</td>
@@ -199,13 +201,13 @@
                       <td><a href="#"><font size="1">申請失敗</font></a></td>
                       <td><font size="1">2019-05-11 08：55：23</font></td>
                     </tr><tr>
-                      <td><a href="#">3</a><span class="badge badge-danger badge-counter">毒</span></td>
+                      <td>3<span class="badge badge-danger badge-counter">毒</span></td>
                       <td>2-Propanol</td>
                       <td>Merch</td>
                       <td>1.09634</td>
                       <td></td>
                       <td>林ＸＸ</td>
-                      <td><a href="#"><font size="1">獲得</font></a></td>
+                      <td><a href="#"><font size="1">已獲得</font></a></td>
                       <td><font size="1">2019-05-01 22：00：00</font></td>
                     </tr>
                   </tbody>
@@ -237,25 +239,139 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
+  <!-- user Modal-->
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userModalLabel">廠商資訊</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!-- modal_body-->
+          <div class="modal-body">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>欄位</th>
+                      <th>名稱</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>欄位</th>
+                      <th>名稱</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>單位名稱</td>
+                      <td>ＸＸ大學 化學系</td>
+                    </tr>
+                    <tr>
+                      <td>聯絡人</td>
+                      <td>林ＸＸ</td>
+                    </tr>
+                    <tr>
+                      <td>電話</td>
+                      <td>09XX-XXXXXX</td>
+                    </tr>
+                    <tr>
+                      <td>地址</td>
+                      <td>台北市中山區ＸＸ路ＸＸ巷ＸＸ號</td>
+                    </tr>
+                    <tr>
+                      <td>數量</td>
+                      <td>1</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          
+          </div>
+          <!-- modal_body-->
+          <div class="modal-footer">
+            <button class="btn btn-success" type="button" data-dismiss="modal">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ｆlow Modal-->
+  <div class="modal fade" id="flowModal" tabindex="-1" role="dialog" aria-labelledby="flowodalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="flowModalLabel">申請流程</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+                  <!-- modal_body-->
+          <div class="modal-body">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>時間</th>
+                      <th>動作</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>時間</th>
+                      <th>動作</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>2019-05-20 12：05：21</td>
+                      <td>化學品上架</td>
+                    </tr>
+                    <tr>
+                      <td>2019-05-20 18：00：30</td>
+                      <td>修改化學品</td>
+                    </tr>
+                    <tr>
+                      <td>2019-05-21 09：30：45</td>
+                      <td>媒合成功</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          
+          </div>
+          <!-- modal_body-->
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">是否確認要登出?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">選擇登出跳出此使用者</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" href="index.html">登出</a>
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
