@@ -141,82 +141,95 @@
                 <h1 class="h4 text-gray-900 mb-4">化學品分享資訊查詢</h1>
               </div>
               <form class="user">
-                <div class="form-group">
-                  <input type="chemiName" class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品名稱">
+                <div class="form-group">化學品名稱（中）
+                  <input type="chemialTW" class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品名稱（中）">
                 </div>
-                <div class="form-group">
-                  <input type="chemiNo" class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品號碼">
+                <div class="form-group">化學品名稱（英）
+                  <input type="chemialEN" class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品名稱（英）">
                 </div>
-                <div class="form-group">
-                  <input type="number"  class="form-control form-control-user" id="exampleInputEmail" placeholder="重量百分濃度(w %)">
+                <div class="form-group">CAS NO
+                  <input type="casNo" class="form-control form-control-user" id="exampleInputEmail" placeholder="CAS NO">
                 </div>
+                
                 <div class="form-group">
-                                    <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
+                    <p style="float:left;width: 40%;height: 10px;">重量百分濃度(W%)</p>
+                    <p style="float:left;width: 30%;height: 10px;">Ｖ％</p>
+                    <p style="float:left;width: 30%;height: 10px;">Ｍ</p>
+                  <input type="number"  class="form-control form-control-user" style="float:left;width: 40%;" id="exampleInputEmail" placeholder="Ｗ％">
+                  <input type="number"  class="form-control form-control-user" style="float:left;width: 30%;" id="exampleInputEmail" placeholder="Ｖ％">
+                  <input type="number"  class="form-control form-control-user" style="float:left;width: 30%;" id="exampleInputEmail" placeholder="Ｍ">
+                </div>
 
-                  <!-- Nav Item - Alerts -->
-                  <li class="nav-item dropdown no-arrow mx-1">
-                        <input type="chemiCompany" class="form-control form-control-user" iid="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="化學品廠商">
-                          <!--<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          </a>-->
-                        </input>
+                <div class="form-group">分子式
+                  <input type="MF" class="form-control form-control-user" id="exampleInputEmail" placeholder="分子式">
+                </div>
 
-                    
-                    <!-- Dropdown - Alerts -->
-                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                      <h6 class="dropdown-header">
-                        化學廠名稱
-                      </h6>
-                      <a class="dropdown-item d-flex align-items-center" href="#">
-                        <div class="mr-3">
-                          <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
+                <div class="form-group">
+                  <label class="checkbox-inline" style="width:30%;"><input type="checkbox" value="">先驅</label>
+                  <label class="checkbox-inline" style="width:30%;"><input type="checkbox" value="">毒化物</label>
+                  <label class="checkbox-inline" style="width:30%;"><input type="checkbox" value="">優先管理</label>
+                </div>
+
+                <!--<div class="form-group">
+                      <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                              <input type="chemiCompany" class="form-control form-control-user" iid="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="化學品廠商">
+                                <!--<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </a>
+                              </input>
+
+                          
+                          <!-- Dropdown - Alerts 
+                          <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                              化學廠名稱
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                <div class="icon-circle bg-primary">
+                                  <i class="fas fa-file-alt text-white"></i>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="small text-gray-500">Ａ化學廠</div>
+                                <span class="font-weight-bold">簡介＋</span>
+                              </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                <div class="icon-circle bg-primary">
+                                  <i class="fas fa-file-alt text-white"></i>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="small text-gray-500">Ｂ化學廠</div>
+                                <span class="font-weight-bold">簡介＋</span>
+                              </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                <div class="icon-circle bg-primary">
+                                  <i class="fas fa-file-alt text-white"></i>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="small text-gray-500">Ｃ化學廠</div>
+                                <span class="font-weight-bold">簡介＋</span>
+                              </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">更多</a>
                           </div>
-                        </div>
-                        <div>
-                          <div class="small text-gray-500">Ａ化學廠</div>
-                          <span class="font-weight-bold">簡介＋</span>
-                        </div>
-                      </a>
-                      <a class="dropdown-item d-flex align-items-center" href="#">
-                        <div class="mr-3">
-                          <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="small text-gray-500">Ｂ化學廠</div>
-                          <span class="font-weight-bold">簡介＋</span>
-                        </div>
-                      </a>
-                      <a class="dropdown-item d-flex align-items-center" href="#">
-                        <div class="mr-3">
-                          <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="small text-gray-500">Ｃ化學廠</div>
-                          <span class="font-weight-bold">簡介＋</span>
-                        </div>
-                      </a>
-                      <a class="dropdown-item text-center small text-gray-500" href="#">更多</a>
-                    </div>
-                  </li>
-                      </div>
-                      <div class="form-group">
-                        <input type="casNo" class="form-control form-control-user" id="exampleInputEmail" placeholder="ＣＡＳ號碼">
-                      </div>
-                      <div class="form-group">
-                        <input type="user" class="form-control form-control-user" id="exampleInputEmail" placeholder="實驗室主持人">
-                      </div>
+                        </li>
+                      </div>-->
                       
-                      <a href="search.html" class="btn btn-google btn-user btn-block">
+                      
+                      <a href="search.html" class="btn btn-google btn-user btn-block" >
                         </i> 查詢
                       </a>
                       
-                    </form>
-                    <hr>
+                </form>
+                <hr>
                     
                 </div>
               </div>
