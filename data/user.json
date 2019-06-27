@@ -3,15 +3,16 @@
            "name":"王小明",
 	   "phone":"0975123456",
 	   "address":"台北市南港區三重路",
-	   "unit":"中研院"}
+	   "unit":"中研院","account":"admin1","pwd":"admin1234"
+		}
            ,{"id":1,
            "name":"陳小春",
 	   "phone":"0933154235",
 	   "address":"高雄市鼓山區明誠四路",
-	   "unit":"高雄化學所"},
+	   "unit":"高雄化學所","account":"admin2","pwd":"admin1234"},
            {"id":2,
            "name":"郭靖",
 	   "phone":"0987456828",
 	   "address":"台中市北屯區文心路四段",
-	   "unit":"台中市科技公司"}]
+	   "unit":"台中市科技公司","account":"admin3","pwd":"admin1234"}]
 }
