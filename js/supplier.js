@@ -13,7 +13,7 @@ function addChemicalByForm() {
 }
 
 function addChemicals(chemicals) {
-  var supplyChemicals = JSON.parse(localStorage.supplyChemical);
+  var supplyChemicals = JSON.parse(localStorage.supplyChemical || "[]");  
 
   supplyChemicals.push(...chemicals);
   localStorage.supplyChemical = JSON.stringify(supplyChemicals);
