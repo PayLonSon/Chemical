@@ -188,8 +188,8 @@
                       <td><a href="#" data-toggle="modal" data-target="#userModal">  
                             林ＸＸ
                         </a></td>
-                      <td><a href="#" data-toggle="modal" data-target="#flowModal"><font size="1">已供應</font></a></td>
-                      <td><font size="1">2019-05-23 10：55：23</font></td>
+                      <td><a href="#" data-toggle="modal" data-target="#flowModal"><font size="1">媒合成功</font></a></td>
+                      <td><font size="1" id = "timeDate">2019-05-23 10：55：23</font></td>
                     </tr>
                     <tr>
                       <td>10</td>
@@ -384,11 +384,14 @@
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script>
+  var today = new Date();
+  //var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1<10 ? '0' : '')+(today.getMonth()+1)+'-'+(today.getDate()+1<10 ? '0' : '')+(today.getDate()+1);
+  var time = (today.getHours()+1<10 ? '0' : '')+(today.getHours()+1)+ "：" + (today.getMinutes()+1<10 ? '0' : '')+(today.getMinutes()+1) + "：" + (today.getSeconds()+1<10 ? '0' : '')+(today.getSeconds()+1);
+  var dateTime = date+' '+time;
+  $("#timeDate").text(dateTime);
+  </script>
 
 </body>
 
