@@ -142,34 +142,34 @@
               </div>
               <form class="user">
                 <div class="form-group">化學品名稱（中）
-                  <input type="chemialTW" class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品名稱（中）">
+                  <input type="chemialTW" class="form-control form-control-user" id="chemialTW" placeholder="化學品名稱（中）">
                 </div>
                 <div class="form-group">化學品名稱（英）
-                  <input type="chemialEN" class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品名稱（英）">
+                  <input type="chemialEN" class="form-control form-control-user" id="chemialEN" placeholder="化學品名稱（英）">
                 </div>
                 <div class="form-group">CAS NO
-                  <input type="casNo" class="form-control form-control-user" id="exampleInputEmail" placeholder="CAS NO">
+                  <input type="casNo" class="form-control form-control-user" id="casNo" placeholder="CAS NO">
                 </div>
                 
                 <div class="form-group">
                     <p style="float:left;width: 40%;height: 10px;">重量百分濃度(W%)</p>
                     <p style="float:left;width: 30%;height: 10px;">Ｖ％</p>
                     <p style="float:left;width: 30%;height: 10px;">Ｍ</p>
-                  <input type="number"  class="form-control form-control-user" style="float:left;width: 40%;" id="exampleInputEmail" placeholder="Ｗ％">
-                  <input type="number"  class="form-control form-control-user" style="float:left;width: 30%;" id="exampleInputEmail" placeholder="Ｖ％">
-                  <input type="number"  class="form-control form-control-user" style="float:left;width: 30%;" id="exampleInputEmail" placeholder="Ｍ">
+                  <input type="number"  class="form-control form-control-user" style="float:left;width: 40%;" id="w" placeholder="Ｗ％">
+                  <input type="number"  class="form-control form-control-user" style="float:left;width: 30%;" id="v" placeholder="Ｖ％">
+                  <input type="number"  class="form-control form-control-user" style="float:left;width: 30%;" id="m" placeholder="Ｍ">
                 </div>
 
                 <div class="form-group">分子式
-                  <input type="MF" class="form-control form-control-user" id="exampleInputEmail" placeholder="分子式">
+                  <input type="MF" class="form-control form-control-user" id="MF" placeholder="分子式">
                 </div>
 
                 <div class="form-group">
-                  <label class="checkbox-inline" style="width:30%;"><input type="checkbox" value="">先驅</label>
-                  <label class="checkbox-inline" style="width:30%;"><input type="checkbox" value="">毒化物</label>
-                  <label class="checkbox-inline" style="width:30%;"><input type="checkbox" value="">優先管理</label>
+                  <label class="checkbox-inline" style="width:30%;"><input id="pioneer" type="checkbox" value="pioneer">先驅</label>
+                  <label class="checkbox-inline" style="width:30%;"><input id="poison" type="checkbox" value="poison">毒化物</label>
+                  <label class="checkbox-inline" style="width:30%;"><input id="priority" type="checkbox" value="priority">優先管理</label>
                 </div>
-
+                <a href="#" data-toggle="modal" data-target="#preparationModal">123</a>
                 <!--<div class="form-group">
                       <ul class="navbar-nav ml-auto">
 
@@ -224,9 +224,9 @@
                       </div>-->
                       
                       
-                      <a href="search.html" class="btn btn-google btn-user btn-block" >
+                      <div class="btn btn-google btn-user btn-block" >
                         </i> 查詢
-                      </a>
+                      </div>
                       
                 </form>
                 <hr>
@@ -260,10 +260,29 @@
         <div class="modal-body">選擇登出跳出此使用者</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-          <a class="btn btn-primary" href="login.html">登出</a>
+          <a class=" " href="login.html">登出</a>
         </div>
       </div>
     </div>
+
+  <!-- Ｐreparation Modal-->
+  <div class="modal fade" id="preparationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">查無此資料?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">選擇登出跳出此使用者</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" href="index.html">登出</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -277,6 +296,7 @@
 
   <!-- paylon js -->
   <script src="js/check_login.js"></script>
+  <script src="js/searchChemical.js"></script>
 </body>
 
 </html>
