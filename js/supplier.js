@@ -25,7 +25,7 @@ function addChemicals(chemicals) {
 function getChemical() {
   const supplyChemicals = JSON.parse(localStorage.supplyChemical);
   const table = document.getElementById("supplyChemicalTable");
-  const headers = ["chemicalEN", "chemicalTW", "casNo", "mTpye", "w", "unit", "remain", "PK", "isToxic"];
+  const headers = ["chemicalEN", "chemicalTW", "casNo", "w", "remain", "isToxic"];
 
 
   for (const chemical of supplyChemicals) {
@@ -60,30 +60,3 @@ function initBtn() {
     row.appendChild(tdApply);
   }
 }
-
-/*
-c = [
-  {
-    "id": 1,
-    "name": "x"
-  },
-  {
-    "id": 2,
-    "name": "y"
-  }
-];
-
-d = [
-  {
-    "id": 3,
-    "name": "xx"
-  },
-  {
-    "id": 4,
-    "name": "yy"
-  }
-];
-
-localStorage.setItem("supplyChemical", JSON.stringify(c));
-addChemicals(d);
-*/
