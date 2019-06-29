@@ -13,10 +13,14 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <script src="js/supplier.js"></script>
 
 </head>
 
@@ -53,7 +57,7 @@
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      
+
 
     </ul>
     <!-- End of Sidebar -->
@@ -75,20 +79,23 @@
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
               </a>
               <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-               
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+
               </div>
             </li>
-           
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Champion</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/user/erondu/1600x900">
               </a>
@@ -129,177 +136,184 @@
             <h1 class="h3 mb-0 text-gray-800">化學品交換平台</h1>
             <!--<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>-->
           </div>
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-          <!-- img-->
-          <div class=""></div>
-          <div class="col-lg-7">
-            <div class="p-5">
-              <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">化學品新增</h1>
-              </div>
-              <form class="user">
-                <div class="form-group">cas no
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="cas no">
-                </div>
-                <div class="form-group">化學品中文名
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品中文名">
-                </div>
-                <div class="form-group">化學品英文名
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="化學品英文名">
-                </div>
-                <div class="form-group">分子式
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="分子式">
-                </div>
-                <div class="form-group">藥品型態
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="藥品型態">
-                </div>
-                <div class="form-group">包裝材料
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="包裝材料">
-                </div>
-                <div class="form-group">剩餘量
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="剩餘量">
-                </div>
-                <div class="form-group">單位
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="單位">
-                </div>
-                <div class="form-group">重量百分濃度(w %)
-                  <input type="number"  class="form-control form-control-user" id="exampleInputEmail" placeholder="重量百分濃度(w %)">
-                </div>
-                <div class="form-group">是否列管毒化物先驅優先管理
-                  <input class="form-control form-control-user" id="exampleInputEmail" placeholder="是否列管毒化物先驅優先管理">
-                </div>
-                <div class="form-group">檢測資料
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroupFileAddon01">上傳</span>
+          <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+              <!-- Nested Row within Card Body -->
+              <div class="row">
+                <!-- img-->
+                <div class=""></div>
+                <div class="col-lg-7">
+                  <div class="p-5">
+                    <div class="text-center">
+                      <h1 class="h4 text-gray-900 mb-4">化學品新增</h1>
                     </div>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile01"
-                        aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label" for="inputGroupFile01">檢測資料上傳</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                                    <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
+                    <form id="editChemicalForm" class="user" method="GET" action="item.html">
+                      <div class="form-group">cas no
+                        <input class="form-control form-control-user" id="casNo" placeholder="cas no">
+                      </div>
+                      <div class="form-group">化學品中文名
+                        <input class="form-control form-control-user" id="chemicalTW" placeholder="化學品中文名">
+                      </div>
+                      <div class="form-group">化學品英文名
+                        <input class="form-control form-control-user" id="chemicalEN" placeholder="化學品英文名">
+                      </div>
+                      <div class="form-group">分子式
+                        <input class="form-control form-control-user" id="MF" placeholder="分子式">
+                      </div>
+                      <div class="form-group">藥品型態
+                        <input class="form-control form-control-user" id="mTpye" placeholder="藥品型態">
+                      </div>
+                      <div class="form-group">包裝材料
+                        <input class="form-control form-control-user" id="PK" placeholder="包裝材料">
+                      </div>
+                      <div class="form-group">剩餘量
+                        <input class="form-control form-control-user" id="remain" placeholder="剩餘量">
+                      </div>
+                      <div class="form-group">單位
+                        <input class="form-control form-control-user" id="unit" placeholder="單位">
+                      </div>
+                      <div class="form-group">重量百分濃度(w %)
+                        <input type="number" class="form-control form-control-user" id="w"
+                          placeholder="重量百分濃度(w %)">
+                      </div>
+                      <div class="form-group">是否列管毒化物先驅優先管理
+                        <input class="form-control form-control-user" id="isToxic"
+                          placeholder="是否列管毒化物先驅優先管理">
+                      </div>
+                      <div class="form-group">檢測資料
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">上傳</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">檢測資料上傳</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
 
-                  <!-- Nav Item - Alerts -->
-                  <li class="nav-item dropdown no-arrow mx-1">
-                        <input type="chemiCompany" class="form-control form-control-user" iid="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="藥品商">
-                          <!--<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <!-- Nav Item - Alerts -->
+                          <li class="nav-item dropdown no-arrow mx-1">
+                            <input type="chemiCompany" class="form-control form-control-user" id="drugDealer"
+                              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                              placeholder="藥品商">
+                            <!--<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           </a>-->
-                        </input>
+                            </input>
 
-                    
-                    <!-- Dropdown - Alerts -->
-                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                      <h6 class="dropdown-header">
-                        化學廠名稱
-                      </h6>
-                      <a class="dropdown-item d-flex align-items-center" href="#">
-                        <div class="mr-3">
-                          <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="small text-gray-500">Ａ化學廠</div>
-                          <span class="font-weight-bold">簡介＋</span>
-                        </div>
-                      </a>
-                      <a class="dropdown-item d-flex align-items-center" href="#">
-                        <div class="mr-3">
-                          <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="small text-gray-500">Ｂ化學廠</div>
-                          <span class="font-weight-bold">簡介＋</span>
-                        </div>
-                      </a>
-                      <a class="dropdown-item d-flex align-items-center" href="#">
-                        <div class="mr-3">
-                          <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="small text-gray-500">Ｃ化學廠</div>
-                          <span class="font-weight-bold">簡介＋</span>
-                        </div>
-                      </a>
-                      <a class="dropdown-item text-center small text-gray-500" href="#">更多</a>
-                    </div>
-                  </li>
+
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                              aria-labelledby="alertsDropdown">
+                              <h6 class="dropdown-header">
+                                化學廠名稱
+                              </h6>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                  <div class="icon-circle bg-primary">
+                                    <i class="fas fa-file-alt text-white"></i>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div class="small text-gray-500">Ａ化學廠</div>
+                                  <span class="font-weight-bold">簡介＋</span>
+                                </div>
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                  <div class="icon-circle bg-primary">
+                                    <i class="fas fa-file-alt text-white"></i>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div class="small text-gray-500">Ｂ化學廠</div>
+                                  <span class="font-weight-bold">簡介＋</span>
+                                </div>
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                  <div class="icon-circle bg-primary">
+                                    <i class="fas fa-file-alt text-white"></i>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div class="small text-gray-500">Ｃ化學廠</div>
+                                  <span class="font-weight-bold">簡介＋</span>
+                                </div>
+                              </a>
+                              <a class="dropdown-item text-center small text-gray-500" href="#">更多</a>
+                            </div>
+                          </li>
                       </div>
                       <div class="form-group">藥品有效期限
-                        <input type="date" class="form-control form-control-user" id="exampleInputEmail" placeholder="藥品有效期限">
+                        <input type="date" class="form-control form-control-user" id="expirationDate"
+                          placeholder="藥品有效期限">
                       </div>
                       <div class="form-group">藥品媒合期限
-                        <input type="date" class="form-control form-control-user" id="exampleInputEmail" placeholder="藥品媒合期限">
+                        <input type="date" class="form-control form-control-user" id="matchDeadline"
+                          placeholder="藥品媒合期限">
                       </div>
-                      <a href="item.html" class="btn btn-google btn-user btn-block">
-                        </i> 確認上傳
-                      </a>
-                      
+                      <button type="button" class="btn btn-google btn-user btn-block" onclick="addChemicalByForm()">
+                        確認上傳
+                      </button>
                     </form>
                     <hr>
-                    
+
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- Content Row -->
+
+            <!-- End of Content Wrapper -->
+
           </div>
-          <!-- Content Row -->
-          
-    <!-- End of Content Wrapper -->
+          <!-- End of Page Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
+          <!-- Scroll to Top Button-->
+          <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+          </a>
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
+          <!-- Logout Modal-->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">是否確認要登出?</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">選擇登出跳出此使用者</div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                  <a class="btn btn-primary" href="index.html">登出</a>
+                </div>
+              </div>
+            </div>
 
-   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">是否確認要登出?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">選擇登出跳出此使用者</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-          <a class="btn btn-primary" href="index.html">登出</a>
-        </div>
-      </div>
-    </div>
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+            <!-- Page level plugins -->
+            <script src="vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+            <!-- Page level custom scripts -->
+            <script src="js/demo/chart-area-demo.js"></script>
+            <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
