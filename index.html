@@ -169,7 +169,9 @@
                   <label class="checkbox-inline" style="width:30%;"><input id="poison" type="checkbox" value="poison">毒化物</label>
                   <label class="checkbox-inline" style="width:30%;"><input id="priority" type="checkbox" value="priority">優先管理</label>
                 </div>
-                <a href="#" data-toggle="modal" data-target="#preparationModal">123</a>
+                <a style="display: none;" id="prepareButton" href="#" data-toggle="modal" data-target="#prepareModal">
+                  按鈕
+                </a>
                 <!--<div class="form-group">
                       <ul class="navbar-nav ml-auto">
 
@@ -260,25 +262,25 @@
         <div class="modal-body">選擇登出跳出此使用者</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-          <a class=" " href="login.html">登出</a>
+          <a class="" href="login.html">登出</a>
         </div>
       </div>
     </div>
-
-  <!-- Ｐreparation Modal-->
-  <div class="modal fade" id="preparationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  </div>
+   <!-- Prepare Modal-->
+  <div class="modal fade" id="prepareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">查無此資料?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">查無此資料</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">選擇登出跳出此使用者</div>
+        <div class="modal-body">是否等待媒合</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
-          <a class="btn btn-primary" href="index.html">登出</a>
+          <a class="" href="login.html">確定</a>
         </div>
       </div>
     </div>

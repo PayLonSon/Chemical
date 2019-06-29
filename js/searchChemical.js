@@ -32,7 +32,9 @@
 							+"\n"+priority
 			);
 	if(chemialTW != "" && chemialEN != "" && casNo != "" && w != "" && v != "" && m != "" ){
-
+		$("#prepareButton").click();
+	}else{
+		window.location.href = "search.html";
 	}
 
 
