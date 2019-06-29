@@ -3,6 +3,7 @@
 	var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 	var page = getAbsolutePath();
 
+
 	if(user==null && page!="login.html"){
 		window.location.href = "login.html";
 	}else if(page=="login.html"){
@@ -46,6 +47,7 @@
 		console.log("DATA:"+userInfo);
 		console.log("DATA:"+userInfo["name"]);
 		$( "span.mr-2" ).text(userInfo["name"]);
+		$('img.img-profile').attr('src','https://images.uncyc.org/zh-tw/3/3b/126.gif');
 	}
 	//
 	
