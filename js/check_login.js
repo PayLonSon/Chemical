@@ -53,7 +53,9 @@
 	
 	//登出紀錄刪除
 	$( "a.btn-primary" ).click(function() {
-		localStorage.clear();
+		//localStorage.removeItem('user');
+		//localStorage.removeItem('userInfo');
+		//localStorage.clear();
 	});
 
 })(jQuery); // End of use strict
