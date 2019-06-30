@@ -31,11 +31,19 @@
 							+"\n"+poison
 							+"\n"+priority
 			);
-	if(chemialTW != "" && chemialEN != "" && casNo != "" && w != "" && v != "" && m != "" ){
-		$("#prepareButton").click();
-	}else{
-		window.location.href = "search.html";
-	}
+		if(chemialTW != "" && chemialEN != "" && casNo != "" && w != "" && v != "" && m != "" ){
+
+			$("#prepareButton").click();
+
+		}else{
+			if(priority != ""){
+				$("#dispoisonButton").click();
+			}else{
+				$("#poisonButton").click();
+			}
+			
+			//window.location.href = "search.html";
+		}
 
 
 	});

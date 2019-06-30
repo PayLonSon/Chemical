@@ -172,6 +172,12 @@
                 <a style="display: none;" id="prepareButton" href="#" data-toggle="modal" data-target="#prepareModal">
                   按鈕
                 </a>
+                <a style="display: none;" id="poisonButton" href="#" data-toggle="modal" data-target="#poisonModal">
+                  按鈕
+                </a>
+                <a style="display: none;" id="dispoisonButton" href="#" data-toggle="modal" data-target="#dispoisonModal">
+                  按鈕
+                </a>
                 <!--<div class="form-group">
                       <ul class="navbar-nav ml-auto">
 
@@ -281,6 +287,43 @@
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
           <a class="" href="login.html">確定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Prepare Modal-->
+  <div class="modal fade" id="poisonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">毒化物審查</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">符合資格查詢</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="" href="search.html">確定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Prepare Modal-->
+  <div class="modal fade" id="dispoisonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">毒化物審查</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">您未取得該毒化物的運作許可，請先向地方環保機關申請該項毒化物運作許可</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="" href="search.html">確定</a>
         </div>
       </div>
     </div>
