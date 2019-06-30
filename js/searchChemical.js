@@ -31,12 +31,12 @@
 							+"\n"+poison
 							+"\n"+priority
 			);
-		if(chemialTW != "" && chemialEN != "" && casNo != "" && w != "" && v != "" && m != "" ){
+		if(chemialTW != "" && chemialEN != "" && casNo != "" && pioneer != "" ){
 
 			$("#prepareButton").click();
 
 		}else{
-			if(priority != ""){
+			if(poison != ""){
 				$("#dispoisonButton").click();
 			}else{
 				$("#poisonButton").click();
